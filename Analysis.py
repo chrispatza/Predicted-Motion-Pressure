@@ -4,7 +4,7 @@ pressure_defense = pd.read_csv("pressure_defense.csv")
 pressure_defense_pmp = pd.read_csv("pressure_defense_pmp.csv")
 players = pd.read_csv("players.csv")
 
-# Merging the 'predicted_motion_pressure' column into the 'defense_all_features' dataframe
+# Merging the 'predicted_motion_pressure' column into the 'pressure_defense' dataframe
 pressure_defense = pd.merge(
     pressure_defense,
     pressure_defense_pmp[['nflId', 'gameId', 'playId', 'frameId', 'predicted_motion_pressure']],
